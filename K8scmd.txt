@@ -1,0 +1,2 @@
+1 Kubectl get pods
+2 Kubectl api-resources
