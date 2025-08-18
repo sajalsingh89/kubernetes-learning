@@ -3,3 +3,7 @@
 3 kubectl  run nginx --image=nginx --dry-run=client # dry run command
 4 kubectl run nginx --image=ngine -o yaml 
 5 kubectl run nginx --image=nginx --dry-run=client -o yaml >>  test-pod.yaml # generate yaml file without creating the pod
+6 kubectl describe pod <pod-name> # describe the details of the pod
+7 kubectl exec -it <pod-name> -- bash #login to pod shell command
+8 kubectl apply -f <yaml-file>  # to create pod using yaml file
+9 kubectl exec -it multi-conatiner-pod -c redis-container -- bash  # to connect to sepecific pod in multi-container
