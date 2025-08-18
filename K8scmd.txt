@@ -1,2 +1,5 @@
-1 Kubectl get pods
-2 Kubectl api-resources
+1 Kubectl get pods # to list the pods created
+2 Kubectl api-resources # list all the resources offered by k8s
+3 kubectl  run nginx --image=nginx --dry-run=client # dry run command
+4 kubectl run nginx --image=ngine -o yaml 
+5 kubectl run nginx --image=nginx --dry-run=client -o yaml >>  test-pod.yaml # generate yaml file without creating the pod
