@@ -6,4 +6,7 @@
 6 kubectl describe pod <pod-name> # describe the details of the pod
 7 kubectl exec -it <pod-name> -- bash #login to pod shell command
 8 kubectl apply -f <yaml-file>  # to create pod using yaml file
-9 kubectl exec -it multi-conatiner-pod -c redis-container -- bash  # to connect to sepecific pod in multi-container
+9 kubectl exec -it multi-container-pod -c redis-container -- bash  # to connect to sepecific pod in multi-container
+10 kubectl run nginx  --image=nginx --command --<command> <args>
+11 kubectl explain pods # to describe  the field associated with each api supported resource
+12 kubectl explain pod.spec # descripe spec fields
