@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-replica
+  labels:
+    app: nginx
+    tier: test
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: test
+  template:
+    metadata:
+      labels:
+        tier: test
+    spec:
+      containers:
+        - name: php-redis
+          image: us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v5

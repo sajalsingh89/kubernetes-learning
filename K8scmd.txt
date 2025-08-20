@@ -10,3 +10,18 @@
 10 kubectl run nginx  --image=nginx --command --<command> <args>
 11 kubectl explain pods # to describe  the field associated with each api supported resource
 12 kubectl explain pod.spec # descripe spec fields
+13 kubectl scale --replicas=<value> rs/<replicaset-name> # used to scale the server in and out based on requirement 
+14 kubectl get replicaset OR kubectl get rs
+15 kubectl scale rs/nginx-replica --replicas=0
+16 kubectl delete -f replica-test.yaml
+17 kubectl label pod external-pod app=webserver # to label the pods 
+18 kubectl get pods --show-labels # it display the lables of pod
+19 kubectl get pods -w
+20 kubectl rollout history deployment/nginx-deployment
+21 kubectl create deployment nginx-deployment --image=nginx  #command to create deployment
+22 kubectl get deployment
+23 kubectl set image deployment/nginx-deployment  nginx=httpd:latest  # to update the image for deployment
+24 kubectl rollout undo deployment nginx-deployment  # to rollout the deployment
+25 kubectl rollout undo deployment nginx-deployment --to-revision=2 # rollout using revision number from history
+26 kubectl scale --replicas=3 deployment nginx-deployment # to scale deployment in for nginx
+27 kubectl delete deployment <deployment-pod label> # delete deployment pods
