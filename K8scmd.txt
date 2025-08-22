@@ -25,3 +25,5 @@
 25 kubectl rollout undo deployment nginx-deployment --to-revision=2 # rollout using revision number from history
 26 kubectl scale --replicas=3 deployment nginx-deployment # to scale deployment in for nginx
 27 kubectl delete deployment <deployment-pod label> # delete deployment pods
+28 kubectl get pods -o wide # command to see the node in which pod its running
+29 kubectl get daemonset
