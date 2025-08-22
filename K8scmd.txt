@@ -27,3 +27,5 @@
 27 kubectl delete deployment <deployment-pod label> # delete deployment pods
 28 kubectl get pods -o wide # command to see the node in which pod its running
 29 kubectl get daemonset
+kubectl create priorityclass high-priority --value=1000 --description="high priority"
+kubectl create priorityclass low-priority --value=100 --description="low priority"
