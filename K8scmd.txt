@@ -33,3 +33,4 @@
 33 kubectl create service --help
 34 kubectl create service clusterip test-service --tcp=80:80 --dry-run=client -o yaml
 35 kubectl create -f nodeport-service.yaml # create nodeport using the file
+36 kubectl create namespace development
