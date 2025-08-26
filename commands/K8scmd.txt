@@ -34,3 +34,7 @@
 34 kubectl create service clusterip test-service --tcp=80:80 --dry-run=client -o yaml
 35 kubectl create -f nodeport-service.yaml # create nodeport using the file
 36 kubectl create namespace development
+37 kubectl create namespace perilious
+38 kubectl run nginx --image=nginx -n perilious
+39 cat /var/run/secrets/kubernetes.io/serviceaccount/token
+40 kubectl expose pod nginx --name example-service --port=80 --target-port=http --type=NodePort
