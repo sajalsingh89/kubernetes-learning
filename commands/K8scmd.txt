@@ -38,3 +38,7 @@
 38 kubectl run nginx --image=nginx -n perilious
 39 cat /var/run/secrets/kubernetes.io/serviceaccount/token
 40 kubectl expose pod nginx --name example-service --port=80 --target-port=http --type=NodePort
+41 kubectl autoscale deployment  php-apache --cpu-percent=50 --min=1 --max=3 #hpa autoscale for deployment
+42 kubectl autoscale --help
+43 kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
+44 kubectl get hpa php-apache --watch
