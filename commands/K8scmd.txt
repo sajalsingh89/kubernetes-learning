@@ -46,3 +46,4 @@
 46 kubectl create secret generic auth-secret --from-literal=admin=password --dry-run=client -o yaml
 47 kubectl get roles --all-namespaces
 48 kubectl cluster-info
+49 kubectl get clusterrolebinding
