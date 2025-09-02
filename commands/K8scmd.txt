@@ -44,3 +44,5 @@
 44 kubectl get hpa php-apache --watch
 45 kubectl create secret generic auth-secret --from-literal=admin=password
 46 kubectl create secret generic auth-secret --from-literal=admin=password --dry-run=client -o yaml
+47 kubectl get roles --all-namespaces
+48 kubectl cluster-info
