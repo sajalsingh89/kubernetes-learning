@@ -47,3 +47,7 @@
 47 kubectl get roles --all-namespaces
 48 kubectl cluster-info
 49 kubectl get clusterrolebinding
+50 kubectl config set-context --current --namespace=<namespace name>
+51 kubectl config  --kubeconfig=config view
+52 kubectl config  --kubeconfig=config get-context
+53 kubectl config  --kubeconfig=config use-context <context name>
