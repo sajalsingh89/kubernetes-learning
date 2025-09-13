@@ -51,3 +51,6 @@
 51 kubectl config  --kubeconfig=config view
 52 kubectl config  --kubeconfig=config get-context
 53 kubectl config  --kubeconfig=config use-context <context name>
+54 kubectl get pods --all-namespaces --field-selector metadata.namespace!=default
+55 kubectl get events --field-selector involvedObject.name=event-pod
+56 kubectl logs ping-pod2 <container name>  # in case of 2 container in your pods  you need to specify the pod 
