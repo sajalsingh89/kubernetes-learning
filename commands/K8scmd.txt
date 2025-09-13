@@ -54,3 +54,6 @@
 54 kubectl get pods --all-namespaces --field-selector metadata.namespace!=default
 55 kubectl get events --field-selector involvedObject.name=event-pod
 56 kubectl logs ping-pod2 <container name>  # in case of 2 container in your pods  you need to specify the pod 
+## logging commnd using journal ctl  
+57 journalctl --since "2025-09-13 17:00:00" -u kube-apiserver
+58 journalctl --since "2025-09-13 17:00:00"  --until "2025-09-13 18:00:00" -u kube-apiserver
