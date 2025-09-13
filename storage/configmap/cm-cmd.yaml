@@ -1,0 +1,3 @@
+kubectl create configmap db-config --from-literal=db_user=dbadmin --from-literal=db_host=172.0.2.1
+kubectl describe configmap db-config
+kubectl get configmap db-config -o yaml
