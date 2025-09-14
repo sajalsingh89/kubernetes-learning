@@ -57,3 +57,5 @@
 ## logging commnd using journal ctl  
 57 journalctl --since "2025-09-13 17:00:00" -u kube-apiserver
 58 journalctl --since "2025-09-13 17:00:00"  --until "2025-09-13 18:00:00" -u kube-apiserver
+59 kubectl drain kubadm-worker-02 --ignore-daemonsets --delete-local-data
+60 kubectl uncordon kubadm-worker-02

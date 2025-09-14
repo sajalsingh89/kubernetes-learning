@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: backend
+    app: backend
+  name: backend-pod
+spec:
+  containers:
+  - image: nginx
+    name: backend-pod
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      capabilities:
+        add: ["NET_RAW"]     
+#     resources: {}
+#   dnsPolicy: ClusterFirst
+#   restartPolicy: Always
+# status: {}
