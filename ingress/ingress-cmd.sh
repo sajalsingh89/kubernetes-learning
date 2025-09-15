@@ -1,0 +1,1 @@
+kubectl create ingress first-ingress --rule="example.internal/*=example-service:80"
